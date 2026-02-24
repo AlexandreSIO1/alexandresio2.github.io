@@ -5,7 +5,7 @@ Ce dépôt regroupe mes travaux pratiques (TP) et mes projets de développement 
 
 SiteHotel (Développement Web)
 Un projet de site de réservation hôtelière:
--Front-end: HTML5 / CSS3 pour une interface propre.
+-Front-end: HTML / CSS pour une interface propre.
 -Back-end: PHP
 
 TP2: Système d'Inscription 
