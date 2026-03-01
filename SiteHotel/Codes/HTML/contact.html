@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Contact - Hotello</title>
+    <link rel="stylesheet" href="../style.css"> 
 </head>
 <body>
+    <nav>
+        <img src="../../Images/logo.png" height="70" width="70">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="chambres.html">Chambres</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Contactez-nous</h1>
+    
     <form action="../formulairecontact.php" method="post">
-        Nom
-        <input type="text" name="nom">
-        <br>
-        Prénom
-        <input type="text" name="prenom">
-        <br>
-        Adresse mail
-        <input type="email" name="email">
-        <br>
-        <input type="submit" value="Valider">
+        <label>Nom :</label>
+        <input type="text" name="nom" required>
+        <br><br>
+        
+        <label>Prénom :</label>
+        <input type="text" name="prenom" required>
+        <br><br>
+        
+        <label>Adresse mail :</label>
+        <input type="email" name="email" required>
+        <br><br>
+
+        <label>Votre demande :</label><br>
+        <textarea name="message" required></textarea>
+        <br><br>
+
+        <input type="submit" value="Envoyer">
         <input type="reset" value="Annuler">
     </form>
 </body>
 </html>
-
