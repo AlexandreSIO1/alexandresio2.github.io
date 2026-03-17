@@ -1,9 +1,14 @@
 <?php
-
 include "connexion.php";
 
-$req = $bdd->prepare("insert into message (nom, prenom, email, message) values (?,?,?,?)");
-$req->execute([$_POST["nom"], $_POST["prenom"], $_POST["email"],$_POST["message"]]);
+$req = $bdd->prepare("INSERT INTO message (nom, prenom, email, message) VALUES (?, ?, ?, ?)");
 
-header("Location:contact.html");
+$req->execute([
+    $_POST["nom"], 
+    $_POST["prenom"], 
+    $_POST["email"], 
+    $_POST["message"]
+]);
+
+header("Location: contact.html");
 ?>
