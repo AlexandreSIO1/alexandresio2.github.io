@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Hotello</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary shadow-sm mb-5" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="../Images/logo.png" height="50" width="50">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chambres.php">Chambres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h1 class="text-center mb-5 text-primary fw-bold">Contactez-nous</h1>    
+                <form action="insertioncontact.php" method="post" class="bg-info bg-gradient p-4 rounded shadow">
+                    <div class="mb-2">
+                        <label class="form-label fw-bold text-dark">Nom :</label>
+                        <input type="text" class="form-control" name="nom" placeholder="Dupont" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label fw-bold text-dark">Prénom :</label>
+                        <input type="text" class="form-control" name="prenom" placeholder="Jean" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label fw-bold text-dark">Adresse mail :</label>
+                        <input type="email" class="form-control" name="email" placeholder="adressemail@example.com" required>
+                    </div>
+                    
+                    <div class="mb-2">
+                        <label class="form-label fw-bold text-dark">Message :</label>
+                        <textarea class="form-control" name="message" placeholder="Votre demande" rows="4" required></textarea>
+                    </div>
+                        <input class="btn btn-light shadow-sm" type="reset" value="Annuler">
+                        <input class="btn btn-primary shadow-sm" type="submit" value="Envoyer">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

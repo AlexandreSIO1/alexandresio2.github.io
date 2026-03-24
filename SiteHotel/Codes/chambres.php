@@ -18,10 +18,10 @@
                         <a class="nav-link" href="index.html">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="chambres.php">Chambres</a>
+                        <a class="nav-link active" href="chambres.php">Chambres</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -34,6 +34,7 @@
 
     <?php
     include "connexion.php";
+    session_start();
 
     $req = $bdd->prepare("SELECT * FROM chambre");
     $req->execute();
@@ -59,11 +60,13 @@
                         Nb de pers : <?php echo $tab["nbpersonne"]; ?>
                     </p>
 
+                    <?php if(isset($_SESSION['admin'])): ?>
                     <a href="deletechambre.php?id=<?php echo $tab["id_chambre"]; ?>" 
                        class="btn btn-danger btn-sm">Supprimer</a>
 
                     <a href="updatechambre.php?id=<?php echo $tab["id_chambre"]; ?>" 
                        class="btn btn-primary btn-sm">Modifier</a>
+                       <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -71,11 +74,10 @@
     <?php } ?>
 
     </div>
-
+    <?php if(isset($_SESSION['admin'])): ?>
     <div class="text-center mt-4">
-        <a href="createchambre.php" class="btn btn-success">
-            Ajouter une chambre
-        </a>
+        <a href="createchambre.php" class="btn btn-success">Ajouter une chambre</a>
+        <?php endif; ?>
     </div>
 </div>
 
