@@ -12,7 +12,7 @@ if (!empty($_POST)) {
 
     if ($user) {
         $_SESSION['admin'] = $user['login'];
-        header("Location: index.html");
+        header("Location: index.php");
         exit();
     }
 }

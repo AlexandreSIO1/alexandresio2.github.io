@@ -44,14 +44,22 @@ if(!empty($_POST)){
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Accueil</a>
+                        <a class="nav-link" href="index.php">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="chambres.php">Chambres</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
+                        <a class="nav-link active" href="contact.php">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Connexion</a>
+                    </li>
+                    <?php if(isset($_SESSION['admin'])): ?>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="deconnexion.php">Déconnexion</a>
+                            </li>
+                        <?php endif; ?>
                 </ul>
             </div>
         </div>

@@ -1,3 +1,8 @@
+<?php
+session_start();
+include "connexion.php";
+?>
+
 <!DOCTYPE HTML>
 <html lang="fr">
 <head>
@@ -15,14 +20,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Accueil</a>
+                        <a class="nav-link" href="index.php">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="chambres.php">Chambres</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.php">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Connexion</a>
+                    </li>
+                        <?php if(isset($_SESSION['admin'])): ?>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="deconnexion.php">Déconnexion</a>
+                            </li>
+                        <?php endif; ?>
                 </ul>
             </div>
         </div>
@@ -33,9 +46,6 @@
     <div class="row">
 
     <?php
-    include "connexion.php";
-    session_start();
-
     $req = $bdd->prepare("SELECT * FROM chambre");
     $req->execute();
     $tabs = $req->fetchAll();

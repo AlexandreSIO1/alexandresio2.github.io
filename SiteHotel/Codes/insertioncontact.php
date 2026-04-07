@@ -10,5 +10,5 @@ $req->execute([
     $_POST["message"]
 ]);
 
-header("Location: contact.html");
+header("Location: contact.php");
 ?>

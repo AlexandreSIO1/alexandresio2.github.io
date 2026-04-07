@@ -1,13 +1,12 @@
 <?php
-
-try{
+try {
     $bdd = new PDO(
         "mysql:host=localhost;dbname=site_hotel;charset=utf8",
         "adminsitehotel",
-        "azerty"
+        "azerty",
+        [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
     );
-}catch(Exception $e){
+} catch(Exception $e) {
     die("Erreur: ". $e->getMessage());
 }
-
 ?>
