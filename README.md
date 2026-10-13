@@ -21,5 +21,3 @@ Projets inclus :
 Calculateur d'IMC : Formulaire complet avec traitement des données et retour utilisateur personnalisé selon les seuils de santé (utilisation de structures if / elseif / else).
 Résolution d'équations : Script de calcul du discriminant (Delta) pour résoudre des polynômes du second degré.
 Scripts de base : Manipulation de variables, opérations arithmétiques et tests de majorité.
-
-test
